@@ -551,15 +551,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa3681ca9f2523458a821c8b740288b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement2D
-  maxSpeed: 8
-  acceleration: 60
+  maxSpeed: 10
+  acceleration: 100
   deceleration: 70
   airAcceleration: 40
   airDeceleration: 40
-  jumpForce: 14
+  jumpForce: 10
   fallGravityMultiplier: 2.2
-  lowJumpGravityMultiplier: 3.5
-  maxFallSpeed: 18
+  lowJumpGravityMultiplier: 6.14
+  maxFallSpeed: 20.8
   coyoteTime: 0.1
   jumpBufferTime: 0.1
   groundCheck: {fileID: 41818393}
