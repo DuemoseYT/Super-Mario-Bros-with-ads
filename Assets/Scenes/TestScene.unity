@@ -1652,7 +1652,7 @@ MonoBehaviour:
   sinkSpeed: 2
   videoPlayer: {fileID: 1507764352}
   videoCanvasObject: {fileID: 2101582412}
-  nextSceneName: SampleScene
+  nextSceneName: Environment
 --- !u!61 &1122933834
 BoxCollider2D:
   m_ObjectHideFlags: 0
