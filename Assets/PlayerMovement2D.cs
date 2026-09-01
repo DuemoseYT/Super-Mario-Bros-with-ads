@@ -34,10 +34,25 @@ public class PlayerMovement2D : MonoBehaviour
     [SerializeField] private bool useSquashStretch = true;
     [SerializeField] private Transform visualsTransform; // child object holding the sprite
 
+    [Header("Crouch")]
+    [SerializeField] private float crouchSpeedMultiplier = 0.4f; // how much slower while crouched
+    [SerializeField] private bool canJumpWhileCrouching = false;
+
     private Rigidbody2D rb;
     private float moveInput;
     private bool jumpHeld;
     private bool jumpPressedThisFrame;
+    private bool isCrouching;
+
+    /// <summary>
+    /// Called by PlayerCrouch to tell movement the crouch state, so speed/jumping can react.
+    /// </summary>
+    public void SetCrouching(bool value)
+    {
+        isCrouching = value;
+    }
+
+    public bool IsCrouching => isCrouching;
 
     private bool isGrounded;
     private float coyoteTimer;
@@ -103,7 +118,8 @@ public class PlayerMovement2D : MonoBehaviour
 
     private void HandleHorizontalMovement()
     {
-        float targetSpeed = moveInput * maxSpeed;
+        float effectiveMaxSpeed = isCrouching ? maxSpeed * crouchSpeedMultiplier : maxSpeed;
+        float targetSpeed = moveInput * effectiveMaxSpeed;
         float speedDiff = targetSpeed - rb.linearVelocity.x;
 
         float accelRate;
@@ -118,7 +134,7 @@ public class PlayerMovement2D : MonoBehaviour
 
     private void HandleJump()
     {
-        bool canJump = coyoteTimer > 0f;
+        bool canJump = coyoteTimer > 0f && (canJumpWhileCrouching || !isCrouching);
         bool wantsJump = jumpBufferTimer > 0f;
 
         if (canJump && wantsJump)
