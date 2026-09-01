@@ -22,11 +22,16 @@ public class Coin : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
-        // Add to the counter
+        // Add to the spendable balance
         if (CoinCounter.Instance != null)
             CoinCounter.Instance.AddCoin(value);
         else
             Debug.LogWarning("Coin collected but no CoinCounter found in scene.");
+
+        // Also count toward battle pass progress (separate from spendable balance,
+        // so spending coins later doesn't undo battle pass levels)
+        if (BattlePassManager.Instance != null)
+            BattlePassManager.Instance.AddCoins(value);
 
         // Optional feedback
         if (pickupSound != null)
