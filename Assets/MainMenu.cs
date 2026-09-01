@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 
 /// <summary>
@@ -11,23 +13,69 @@ public class MainMenu : MonoBehaviour
     [Header("Scene to load on Play")]
     [SerializeField] private string sceneName = "Level1"; // must match Build Settings exactly
 
+    [Header("Intro Video (optional)")]
+    [SerializeField] private VideoPlayer videoPlayer;       // assign the VideoPlayer in your scene
+    [SerializeField] private GameObject videoCanvasObject;  // the Canvas/panel holding the video display, disabled by default
+    [SerializeField] private GameObject menuUI;             // your main menu buttons/panel, to hide while video plays
+
+    private bool isTransitioning;
+
+    private void Awake()
+    {
+        if (videoCanvasObject != null)
+            videoCanvasObject.SetActive(false);
+    }
+
     /// <summary>
     /// Hook up to your "Play" button's OnClick.
     /// </summary>
     public void PlayGame()
     {
+        if (isTransitioning) return;
+
         // Reset timescale in case it was paused from a previous session (e.g. death menu)
         Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(PlayIntroThenLoad(sceneName));
     }
 
     /// <summary>
     /// Alternative: load by build index instead of name, if you prefer.
+    /// Also plays the intro video first, same as PlayGame().
     /// </summary>
     public void PlayGameByIndex(int buildIndex)
     {
+        if (isTransitioning) return;
+
         Time.timeScale = 1f;
-        SceneManager.LoadScene(buildIndex);
+        StartCoroutine(PlayIntroThenLoad(null, buildIndex));
+    }
+
+    private IEnumerator PlayIntroThenLoad(string targetSceneName, int targetBuildIndex = -1)
+    {
+        isTransitioning = true;
+
+        if (menuUI != null)
+            menuUI.SetActive(false);
+
+        if (videoPlayer != null)
+        {
+            if (videoCanvasObject != null)
+                videoCanvasObject.SetActive(true);
+
+            videoPlayer.Prepare();
+            while (!videoPlayer.isPrepared)
+                yield return null;
+
+            videoPlayer.Play();
+
+            while (videoPlayer.isPlaying)
+                yield return null;
+        }
+
+        if (!string.IsNullOrEmpty(targetSceneName))
+            SceneManager.LoadScene(targetSceneName);
+        else
+            SceneManager.LoadScene(targetBuildIndex);
     }
 
     /// <summary>
