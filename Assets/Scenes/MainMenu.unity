@@ -179,7 +179,11 @@ MonoBehaviour:
   m_text: MINIGAMES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+<<<<<<< Updated upstream
   m_sharedMaterial: {fileID: -4100591917887679229, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+=======
+  m_sharedMaterial: {fileID: 7783937054634456219, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -316,7 +320,11 @@ MonoBehaviour:
   m_text: GAMBLE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+<<<<<<< Updated upstream
   m_sharedMaterial: {fileID: -4100591917887679229, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+=======
+  m_sharedMaterial: {fileID: 7783937054634456219, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -574,7 +582,11 @@ MonoBehaviour:
   m_text: SUPER MARIO BROS.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+<<<<<<< Updated upstream
   m_sharedMaterial: {fileID: -4100591917887679229, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+=======
+  m_sharedMaterial: {fileID: 7783937054634456219, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -711,7 +723,11 @@ MonoBehaviour:
   m_text: WATCH AN AD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+<<<<<<< Updated upstream
   m_sharedMaterial: {fileID: -4100591917887679229, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+=======
+  m_sharedMaterial: {fileID: 7783937054634456219, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1133,7 +1149,11 @@ MonoBehaviour:
   m_text: SKINS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+<<<<<<< Updated upstream
   m_sharedMaterial: {fileID: -4100591917887679229, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+=======
+  m_sharedMaterial: {fileID: 7783937054634456219, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1524,7 +1544,11 @@ MonoBehaviour:
   m_text: PLAY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+<<<<<<< Updated upstream
   m_sharedMaterial: {fileID: -4100591917887679229, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+=======
+  m_sharedMaterial: {fileID: 7783937054634456219, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1661,7 +1685,11 @@ MonoBehaviour:
   m_text: BATTLEPASS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+<<<<<<< Updated upstream
   m_sharedMaterial: {fileID: -4100591917887679229, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+=======
+  m_sharedMaterial: {fileID: 7783937054634456219, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2069,7 +2097,11 @@ MonoBehaviour:
   m_text: "\u2193SUPPORT US ON MOBILEPAY\u2193"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+<<<<<<< Updated upstream
   m_sharedMaterial: {fileID: -4100591917887679229, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+=======
+  m_sharedMaterial: {fileID: 7783937054634456219, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2257,7 +2289,11 @@ MonoBehaviour:
   m_text: QUIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+<<<<<<< Updated upstream
   m_sharedMaterial: {fileID: -4100591917887679229, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+=======
+  m_sharedMaterial: {fileID: 7783937054634456219, guid: ff1414f34d5283946b09e3870dd18a5c, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
