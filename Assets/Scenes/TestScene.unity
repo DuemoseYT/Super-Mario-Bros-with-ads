@@ -1251,7 +1251,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 5210232627041296649, guid: de2060090e91cda428882c6b0618ff8c, type: 3}
       propertyPath: m_Size.x
       value: 6.686848
@@ -1280,12 +1279,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6832078442279881449, guid: 12e5b9ab0f9ef48449d214f5c8979431, type: 3}
-=======
-    - target: {fileID: 6399955635258320499, guid: de2060090e91cda428882c6b0618ff8c, type: 3}
-      propertyPath: m_ClearFlags
-      value: 1
-      objectReference: {fileID: 0}
->>>>>>> Stashed changes
     - target: {fileID: 6698901765699735276, guid: de2060090e91cda428882c6b0618ff8c, type: 3}
       propertyPath: m_Name
       value: Mario
