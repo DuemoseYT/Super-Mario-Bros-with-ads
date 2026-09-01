@@ -18,12 +18,27 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject videoCanvasObject;  // the Canvas/panel holding the video display, disabled by default
     [SerializeField] private GameObject menuUI;             // your main menu buttons/panel, to hide while video plays
 
+    [Header("Skip Button (optional)")]
+    [SerializeField] private GameObject skipButtonObject; // shown only after skipButtonDelay seconds
+    [SerializeField] private float skipButtonDelay = 5f;
+
     private bool isTransitioning;
+    private bool skipRequested;
 
     private void Awake()
     {
         if (videoCanvasObject != null)
             videoCanvasObject.SetActive(false);
+        if (skipButtonObject != null)
+            skipButtonObject.SetActive(false);
+    }
+
+    /// <summary>
+    /// Hook up to the skip button's OnClick.
+    /// </summary>
+    public void SkipVideo()
+    {
+        skipRequested = true;
     }
 
     /// <summary>
@@ -68,8 +83,23 @@ public class MainMenu : MonoBehaviour
 
             videoPlayer.Play();
 
-            while (videoPlayer.isPlaying)
+            skipRequested = false;
+            float elapsed = 0f;
+
+            while (videoPlayer.isPlaying && !skipRequested)
+            {
+                elapsed += Time.deltaTime;
+
+                if (skipButtonObject != null && !skipButtonObject.activeSelf && elapsed >= skipButtonDelay)
+                    skipButtonObject.SetActive(true);
+
                 yield return null;
+            }
+
+            videoPlayer.Stop();
+
+            if (skipButtonObject != null)
+                skipButtonObject.SetActive(false);
         }
 
         if (!string.IsNullOrEmpty(targetSceneName))
