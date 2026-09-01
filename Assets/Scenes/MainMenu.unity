@@ -2006,6 +2006,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536935269}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
@@ -2149,6 +2150,8 @@ CanvasRenderer:
 =======
 >>>>>>> 322918443ab9fa782ae28f55a6e4d2f4f872cfc2
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of b98b87f (MainMenu + BattlePass)
 --- !u!1 &1571405386
 GameObject:
   m_ObjectHideFlags: 0
