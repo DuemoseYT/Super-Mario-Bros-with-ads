@@ -24,6 +24,17 @@ public class CoinFloat : MonoBehaviour
         randomOffset = Random.Range(0f, Mathf.PI * 2f); // random phase
     }
 
+    /// <summary>
+    /// Re-anchors the bob origin to the current position. Call this if the object was
+    /// moved by other code (e.g. popped up out of a lucky block) after Awake() already
+    /// captured the old spawn point, so it bobs around the new position instead of
+    /// snapping back to where it started.
+    /// </summary>
+    public void ResetStartPosition()
+    {
+        startPos = transform.position;
+    }
+
     private void Update()
     {
         // Sine wave bob around the starting position

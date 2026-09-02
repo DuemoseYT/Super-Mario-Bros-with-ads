@@ -156,6 +156,8 @@ MonoBehaviour:
     m_Bits: 64
   useSquashStretch: 1
   visualsTransform: {fileID: 8653091175226149985}
+  crouchSpeedMultiplier: 0.4
+  canJumpWhileCrouching: 0
 --- !u!61 &5210232627041296649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -525,7 +527,7 @@ MonoBehaviour:
   m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e26ccbc866ec269418c33ae06ddfc891, type: 2}
-  m_sharedMaterial: {fileID: 1229043895203479229, guid: e26ccbc866ec269418c33ae06ddfc891, type: 2}
+  m_sharedMaterial: {fileID: 5718500969884513960, guid: e26ccbc866ec269418c33ae06ddfc891, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
