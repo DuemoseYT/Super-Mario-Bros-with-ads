@@ -15,6 +15,7 @@ public class RespawnManager : MonoBehaviour
     [SerializeField] private GameObject deathMenuPanel; // the whole UI panel, disabled by default
     [SerializeField] private Button respawnButton;
     [SerializeField] private TextMeshProUGUI deathMessageText; // optional, e.g. "You Died!"
+    [SerializeField] private CameraFollow2D cameraFollow; // auto-found if left empty
 
     [Header("Settings")]
     [SerializeField] private bool pauseOnDeath = true;
@@ -43,6 +44,9 @@ public class RespawnManager : MonoBehaviour
 
         if (respawnButton != null)
             respawnButton.onClick.AddListener(Respawn);
+
+        if (cameraFollow == null)
+            cameraFollow = FindFirstObjectByType<CameraFollow2D>();
     }
 
     /// <summary>
@@ -92,5 +96,10 @@ public class RespawnManager : MonoBehaviour
 
             player.SetActive(true);
         }
+
+        // Reset the camera to the respawn point too, otherwise preventBacktrackX
+        // (if enabled) leaves it stuck at the furthest point it had reached.
+        if (cameraFollow != null)
+            cameraFollow.SnapToTarget();
     }
 }

@@ -152,6 +152,7 @@ MonoBehaviour:
   deathMenuPanel: {fileID: 264713078}
   respawnButton: {fileID: 1136122383}
   deathMessageText: {fileID: 1599237591}
+  cameraFollow: {fileID: 0}
   pauseOnDeath: 1
   deathMessage: You Died!
 --- !u!4 &109173177
@@ -803,7 +804,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bbdc2f6a2fcce6941970e78a311de887, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -939,7 +940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7127747625376099007, guid: 54933151ed2569f4ba8c04c160329611, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.12
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 7127747625376099007, guid: 54933151ed2569f4ba8c04c160329611, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1214,7 +1215,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bbdc2f6a2fcce6941970e78a311de887, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1723,7 +1724,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bbdc2f6a2fcce6941970e78a311de887, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2053,6 +2054,10 @@ PrefabInstance:
       propertyPath: useSquashStretch
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5636413217203526999, guid: de2060090e91cda428882c6b0618ff8c, type: 3}
+      propertyPath: fallGravityMultiplier
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6399955635258320499, guid: de2060090e91cda428882c6b0618ff8c, type: 3}
       propertyPath: m_OcclusionCulling
       value: 1
@@ -2150,7 +2155,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bbdc2f6a2fcce6941970e78a311de887, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2508,7 +2513,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bbdc2f6a2fcce6941970e78a311de887, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2646,7 +2651,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bbdc2f6a2fcce6941970e78a311de887, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -3100,7 +3105,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bbdc2f6a2fcce6941970e78a311de887, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -3204,7 +3209,7 @@ Transform:
   m_GameObject: {fileID: 1276571840}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.6076, y: 1.38, z: 0}
+  m_LocalPosition: {x: 19.6076, y: 0.98, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4259,7 +4264,7 @@ Transform:
   m_GameObject: {fileID: 1744031219}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.07628405, w: 0.99708617}
-  m_LocalPosition: {x: 23.89, y: 4.71, z: 0}
+  m_LocalPosition: {x: 23.81, y: 4.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4636,7 +4641,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bbdc2f6a2fcce6941970e78a311de887, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -4848,7 +4853,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bbdc2f6a2fcce6941970e78a311de887, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -5357,7 +5362,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bbdc2f6a2fcce6941970e78a311de887, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

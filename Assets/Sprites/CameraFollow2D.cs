@@ -39,6 +39,33 @@ public class CameraFollow2D : MonoBehaviour
             maxReachedX = target.position.x + offset.x;
     }
 
+    /// <summary>
+    /// Instantly snaps the camera to the target's current position and resets the
+    /// "furthest reached" tracking used by preventBacktrackX. Call this after
+    /// teleporting the player (e.g. on respawn) so the camera doesn't stay stuck
+    /// ahead of where the player actually is.
+    /// </summary>
+    public void SnapToTarget()
+    {
+        if (target == null) return;
+
+        float targetX = target.position.x + offset.x;
+        float targetY = lockVertical ? fixedY : target.position.y + offset.y;
+
+        maxReachedX = targetX;
+        velocity = Vector3.zero;
+
+        Vector3 snapPosition = new Vector3(targetX, targetY, transform.position.z);
+
+        if (useBounds)
+        {
+            snapPosition.x = Mathf.Clamp(snapPosition.x, minX, maxX);
+            snapPosition.y = Mathf.Clamp(snapPosition.y, minY, maxY);
+        }
+
+        transform.position = snapPosition;
+    }
+
     private void LateUpdate()
     {
         if (target == null) return;
